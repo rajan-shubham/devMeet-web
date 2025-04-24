@@ -1,6 +1,6 @@
 const Feed = () => {
     return (
-        <div>Hello</div>
+        <div className="my-16">Hello</div>
     );
 };
 
