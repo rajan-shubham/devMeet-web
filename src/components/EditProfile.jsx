@@ -20,8 +20,7 @@ const EditProfile = ({ user }) => {
     //Clear Errors
     setError("");
     try {
-      console.log("check 1 pEdid");
-      const res = await axios.patch(BASE_URL+"/profile/edit",
+      const res = await axios.patch(BASE_URL + "/profile/edit",
         {
           firstName,
           lastName,
@@ -38,15 +37,13 @@ const EditProfile = ({ user }) => {
         },
         
       );
-        console.log(res);
-      dispatch(addUser(res?.data));
+      dispatch(addUser(res?.data?.data));
       setShowToast(true);
       setTimeout(() => {
         setShowToast(false);
       }, 3000);
     } catch (err) {
-        console.error(err);
-      setError(err);
+      setError(err.response?.data || err.message);
     }
   };
 
