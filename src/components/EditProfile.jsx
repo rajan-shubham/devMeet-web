@@ -124,7 +124,7 @@ const EditProfile = ({ user }) => {
               </div>
               <p className="text-red-500">{error}</p>
               <div className="card-actions justify-center m-2">
-                <button className="btn btn-primary" onClick={saveProfile}>
+                <button className="btn btn-soft btn-success" onClick={saveProfile}>
                   Save Profile
                 </button>
               </div>
